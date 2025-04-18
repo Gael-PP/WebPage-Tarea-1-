@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    /* Por defecto, los elementos estarán en columna */
+    align-items: center;
+    height: auto;
+    border-bottom: 2.5px solid black;
+}
+
+.header__profile,
+.nav {
+    margin-top: 16px;
+}
+
+.header__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__profile-picture {
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+    border: .2px solid black;
+    margin-bottom: 16px;
+}
+
+.header__profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Nav */
+
+.nav {
+    width: 70%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+}
+
+.nav__item {
+    display: flex;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.divisor {
+    font-size: 1.5rem;
+}
+
+.title {
+    font-family: 'Comic Sans MS';
+    text-align: center;
+    padding: 23px 0;
+}
+
+/* Introduction */
+
+.introduction {
+    margin-bottom: 16px;
+}
+
+.introduction__title {
+    font-size: 1.6rem;
+    padding: 14px 0;
+}
+
+.introduction__slogan {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Main */
+
+.projects,
+.work {
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1.7px solid black;
+}
+
+/* .content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.hidden {
+    opacity: 0; /* Oculta el contenido */
+    max-height: 0; /* Reduce la altura máxima a 0 */
+    overflow: hidden; /* Evita que el contenido desbordado sea visible */
+    transition: opacity 0.5s ease, max-height 0.5s ease; /* Define la animación */
+}
+
+.visible {
+    opacity: 1; /* Muestra el contenido */
+    max-height: 500px; /* Ajusta la altura máxima (puedes cambiar este valor según el contenido) */
+    overflow: visible; /* Permite que el contenido sea visible */
+    transition: opacity 0.5s ease, max-height 0.5s ease; /* Define la animación */
+}
+
+hr {
+    opacity: 1;
+    border: 1px solid black;
+    width: 100%;
+}
+
+/* Projects */
+
+.projects__list-projects {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+}
+
+.projects__item {
+    list-style: none;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    background-color: #e7edf3;
+}
+
+/* Work */
+
+.roadmap,
+.open-source {
+    background-color: #e7edf3;
+}
+
+.roadmap {
+    width: 100%;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+.roadmap__title {
+    text-align: left;
+    font-size: 17px;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.roadmap__description {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.roadmap__a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.open-source {
+    width: 100%;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+.open-source__title {
+    text-align: left;
+    font-size: 17px;
+    font-style: italic;
+    padding: 10px 0;
+}
+
+.open-source__description {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.open-source__a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Education */
+
+.education {
+    padding: 0 26px;
+}
+
+.education__courses-title {
+    margin: 10px 0;
+}
+
+
+.education__list-item {
+    list-style-type: none;
+    /* Elimina el marcador predeterminado */
+    position: relative;
+    /* Necesario para posicionar el ::before */
+    padding-left: 12px;
+    /* Espacio para el guion */
+}
+
+.education__list-item::before {
+    content: "-";
+    /* Agrega el guion */
+    position: absolute;
+    left: 0;
+    /* Posiciona el guion al inicio */
+}
+
+/* Footer */
+
+/* Review */
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews__review {
+    display: none;
+
+}
+
+.reviews__review.active {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.reviews__comments {
+    margin-bottom: 15px;
+}
+
+.reviews__comments-author, .reviews__comments-profession {
+    font-weight: bold;
+    color: #b1b1b1;
+}

@@ -11,52 +11,72 @@
 <body>
 
      <header class="header">
+
           <div class="header__profile">
-               <img class="header__profile-picture" src="./assets/pfp.png" alt="Profile Picture">
+               <img class="header__profile-picture" src="./img/a.jpg" alt="Profile Picture">
+               <p class="header__profile-name"> Gerardo Gael Rojas Ramos</p>
           </div>
           <div class="nav">
                <ul class="nav__list">
                     <li class="nav__item">Home</li>
+                    <p class="divisor">/</p>
                     <li class="nav__item">Projects</li>
+                    <p class="divisor">/</p>
                     <li class="nav__item">Articles</li>
+                    <p class="divisor">/</p>
                     <li class="nav__item">Contact</li>
                </ul>
           </div>
+
+
           <div class="introduction">
-               <h1 class="introduction__title">Fontrend Developer</h1>
+               <h1 class="introduction__title title">Fontrend Developer</h1>
                <span class="introduction__slogan">html only with proper layout, no styling</span>
           </div>
      </header>
      <main class="main">
           <section class="projects">
-               <h2 class="projects__title title">Projects</h2>
-                         <ul class="projects__list-projects">
-                              <li class="projects__item">HTML Only Portfolio</li>
-                              <li class="projects__item">Calculator</li>
-                              <li class="projects__item">Quiz App</li>
-                              <li class="projects__item">Countdown Timer</li>
-                              <li class="projects__item">Product Upcoming Page</li>
-                         </ul>
-               
+               <h2 class="projects__title title" data-toggle="projects-content">Projects</h2>
+               <div id="projects-content" class="hidden">
+                    <ul class="projects__list-projects">
+                         <hr>
+                         <li class="projects__item">HTML Only Portfolio</li>
+                         <hr>
+                         <li class="projects__item">Calculator</li>
+                         <hr>
+                         <li class="projects__item">Quiz App</li>
+                         <hr>
+                         <li class="projects__item">Countdown Timer</li>
+                         <hr>
+                         <li class="projects__item">Product Upcoming Page</li>
+                    </ul>
+               </div>
+
+
           </section>
           <section class="work">
-               <h2 class="work__title title">Work Experience</h2>
-               <div class="roadmap">
-                    <h3 class="roadmap__title">roadmap.sh</h3>
-                    <p class="roadmap__description">Solved all the frontend projects</p>
-                    <a class="roadmap__a" href="#">View my Profile</a>
+               <h2 class="work__title title" data-toggle="work-content"">Work Experience</h2>
+               <div id="work-content" class="hidden">
+                    <hr>
+                    <div class="roadmap">
+                         <h3 class="roadmap__title title">roadmap.sh</h3>
+                         <p class="roadmap__description">Solved all the frontend projects</p>
+                         <a class="roadmap__a" href="#">View my Profile</a>
+                    </div>
+                    <hr>
+                    <div class="open-source">
+                         <h3 class="open-source__title title">OpenSource Work</h3>
+                         <p class="open-source__description">Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
+                         <a class="open-source__a" href="#">View my GitHub Profile</a>
+                    </div>
                </div>
-               <div class="open-source">
-                    <h3 class="open-source__title">OpenSource Work</h3>
-                    <p class="open-source__description">Contributed to 50 opensource projects. Made my own projects with 200 GitHub Stars.</p>
-                    <a class="open-source__a" href="#">View my GitHub Profile</a>
-               </div>
+
           </section>
           <section class="education">
-               <p class="education__achieves">
-                    Graduated with 3.76 out of 4. CGPA. Won Acme Hackathon. Organized 30 sessions.
-               <p/>
-               <h3 class="education__courses-title">Courses I took:</h3>
+               <h2 class="education__title title">Education</h2>
+               <p class="education__achieves">Graduated with 3.76 out of 4. CGPA. Won Acme Hackathon. Organized 30
+                    sessions.</p>
+               <p class="education__courses-title">Courses I took:</p>
                <ul class="education__courses-list">
                     <li class="education__list-item">Object Oriented Programming</li>
                     <li class="education__list-item">Data Structures and Algorithms</li>
@@ -73,26 +93,30 @@
 
      <footer class="footer">
           <div class="reviews">
-               <h2 class="reviews__title">Reviews from my teacher</h2>
-               <div class="reviews__review">
-                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this assigments.</p>
+               <h2 class="reviews__title title">Reviews from my teacher</h2>
+               <div class="reviews__review active">
+                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this
+                         assigments.</p>
                     <p class="reviews__comments-author">Jane Doe</p>
                     <p class="reviews__comments-profession">Assistant Professor</p>
                </div>
                <div class="reviews__review">
-                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this assigments.</p>
+                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this
+                         assigments.</p>
                     <p class="reviews__comments-author">Jane Doe</p>
                     <p class="reviews__comments-profession">Assistant Professor</p>
                </div>
                <div class="reviews__review">
-                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this assigments.</p>
+                    <p class="reviews__comments">John doe was a brilliant student; always stood out with this
+                         assigments.</p>
                     <p class="reviews__comments-author">Jane Doe</p>
                     <p class="reviews__comments-profession">Assistant Professor</p>
                </div>
           </div>
-          &copy; all rights reserved 2025
+          <p class="title">&copy; all rights reserved 2025</p>
      </footer>
 
+     <script src="./main.js"></script>
 
 </body>
 

@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     box-sizing: border-box;
     padding: 0;
@@ -102,31 +102,35 @@ body {
     border-bottom: 1.7px solid black;
 }
 
-/* .content {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .hidden {
-    opacity: 0; /* Oculta el contenido */
-    max-height: 0; /* Reduce la altura máxima a 0 */
-    overflow: hidden; /* Evita que el contenido desbordado sea visible */
-    transition: opacity 0.5s ease, max-height 0.5s ease; /* Define la animación */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
 .visible {
-    opacity: 1; /* Muestra el contenido */
-    max-height: 500px; /* Ajusta la altura máxima (puedes cambiar este valor según el contenido) */
-    overflow: visible; /* Permite que el contenido sea visible */
-    transition: opacity 0.5s ease, max-height 0.5s ease; /* Define la animación */
+    opacity: 1;
+    max-height:fit-content;
+    overflow: visible;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
 hr {
     opacity: 1;
     border: 1px solid black;
     width: 100%;
+}
+
+.projects__title,
+.work__title {
+    cursor: pointer;
+}
+
+.projects__title:hover,
+.work__title:hover {
+    background-color: #b6d5fe;
+    transition: background-color 0.5s ease;
 }
 
 /* Projects */
@@ -216,19 +220,14 @@ hr {
 
 .education__list-item {
     list-style-type: none;
-    /* Elimina el marcador predeterminado */
     position: relative;
-    /* Necesario para posicionar el ::before */
     padding-left: 12px;
-    /* Espacio para el guion */
 }
 
 .education__list-item::before {
     content: "-";
-    /* Agrega el guion */
     position: absolute;
     left: 0;
-    /* Posiciona el guion al inicio */
 }
 
 /* Footer */
@@ -260,7 +259,153 @@ hr {
     margin-bottom: 15px;
 }
 
-.reviews__comments-author, .reviews__comments-profession {
+.reviews__comments-author,
+.reviews__comments-profession {
     font-weight: bold;
     color: #b1b1b1;
+}
+
+
+@media screen and (width > 1024px) {
+
+    .hidden {
+        opacity: 1;
+        height: 100%;
+        overflow: visible;
+        max-height: inherit;
+    }
+
+    .header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        height: 320px;
+    }
+
+    .header__profile {
+        flex-direction: row;
+        width: fit-content;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    .header__profile-picture {
+        margin: 0;
+    }
+
+    .header__profile-name {
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    .nav {
+        width: fit-content;
+    }
+
+    .nav__list {
+        width: fit-content;
+        justify-content: end;
+    }
+
+    .nav__item {
+        margin: 0 12px;
+    }
+
+    .introduction {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        ;
+        align-items: center;
+    }
+
+    .introduction__title {
+        width: fit-content;
+    }
+
+    .introduction__slogan {
+        width: fit-content;
+    }
+
+
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-height: 316px;
+    }
+
+    .projects {
+        width: 25%;
+        height: auto;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+    .work {
+        width: 70%;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+    }
+
+     #work-content {
+        height: calc(100% - 79.16px);
+    }
+
+    .roadmap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 50%
+    }
+
+    .open-source {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 49%;
+    }
+
+    .education {
+        border-bottom: 2px solid black;
+        height: auto;
+        width: 30%;
+
+    }
+
+    .reviews {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .reviews__title {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .reviews__review.active {
+        display: flex;
+        flex-direction: column;;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 25px;
+        width: 28%;
+    }
+
+    .reviews__review {
+        display: flex;
+        flex-direction: column;;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 25px;
+        width: 28%;
+    }
+
 }

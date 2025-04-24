@@ -346,10 +346,25 @@ hr {
         border-bottom: 2px solid black;
     }
 
+    .projects__title:hover {
+        background-color: inherit;
+        transition: none;
+        cursor: default;
+    }
+    .projects__item {
+        background-color: inherit
+    }
+
     .work {
         width: 70%;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
+    }
+
+    .work__title:hover {
+        background-color: inherit;
+        transition: none;
+        cursor: default;
     }
 
      #work-content {

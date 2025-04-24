@@ -1,4 +1,4 @@
-* { 
+* {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
@@ -111,7 +111,7 @@ body {
 
 .visible {
     opacity: 1;
-    max-height:fit-content;
+    max-height: fit-content;
     overflow: visible;
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
@@ -351,6 +351,7 @@ hr {
         transition: none;
         cursor: default;
     }
+
     .projects__item {
         background-color: inherit
     }
@@ -367,8 +368,13 @@ hr {
         cursor: default;
     }
 
-     #work-content {
+    #work-content {
         height: calc(100% - 79.16px);
+    }
+
+    .roadmap,
+    .open-source {
+        background-color: inherit;
     }
 
     .roadmap {
@@ -407,7 +413,8 @@ hr {
 
     .reviews__review.active {
         display: flex;
-        flex-direction: column;;
+        flex-direction: column;
+        ;
         border: 1px solid black;
         border-radius: 15px;
         padding: 25px;
@@ -416,7 +423,8 @@ hr {
 
     .reviews__review {
         display: flex;
-        flex-direction: column;;
+        flex-direction: column;
+        ;
         border: 1px solid black;
         border-radius: 15px;
         padding: 25px;
